@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>席替えシステム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>席替えシステム</h1>
+
+        <!-- ホワイトボード -->
+        <div class="seating-container">
+            <div class="whiteboard">ホワイトボード</div>
+            <div class="seating-grid">
+                <!-- 列1 -->
+                <div class="column">
+                    <div class="seat" data-seat="1">1</div>
+                    <div class="seat" data-seat="2">2</div>
+                    <div class="seat" data-seat="3">3</div>
+                    <div class="seat" data-seat="4">4</div>
+                    <div class="seat" data-seat="5">5</div>
+                    <div class="seat" data-seat="6">6</div>
+                    <div class="seat" data-seat="7">7</div>
+                </div>
+                <!-- 列2 -->
+                <div class="column">
+                    <div class="seat" data-seat="8">8</div>
+                    <div class="seat" data-seat="9">9</div>
+                    <div class="seat" data-seat="10">10</div>
+                    <div class="seat" data-seat="11">11</div>
+                    <div class="seat" data-seat="12">12</div>
+                    <div class="seat" data-seat="13">13</div>
+                    <div class="seat" data-seat="14">14</div>
+                </div>
+                <!-- 列3 -->
+                <div class="column">
+                    <div class="seat" data-seat="15">15</div>
+                    <div class="seat" data-seat="16">16</div>
+                    <div class="seat" data-seat="17">17</div>
+                    <div class="seat" data-seat="18">18</div>
+                    <div class="seat" data-seat="19">19</div>
+                    <div class="seat" data-seat="20">20</div>
+                    <div class="seat" data-seat="21">21</div>
+                </div>
+                <!-- 列4 -->
+                <div class="column">
+                    <div class="seat" data-seat="22">22</div>
+                    <div class="seat" data-seat="23">23</div>
+                    <div class="seat" data-seat="24">24</div>
+                    <div class="seat" data-seat="25">25</div>
+                    <div class="seat" data-seat="26">26</div>
+                    <div class="seat" data-seat="27">27</div>
+                    <div class="seat" data-seat="28">28</div>
+                </div>
+                <!-- 列5 -->
+                <div class="column">
+                    <div class="seat" data-seat="29">29</div>
+                    <div class="seat" data-seat="30">30</div>
+                    <div class="seat" data-seat="31">31</div>
+                    <div class="seat" data-seat="32">32</div>
+                    <div class="seat" data-seat="33">33</div>
+                    <div class="seat" data-seat="34">34</div>
+                    <div class="seat" data-seat="35">35</div>
+                </div>
+                <!-- 列6 -->
+                <div class="column">
+                    <div class="empty-space"></div> <!-- 空白 -->
+                    <div class="seat" data-seat="36">36</div>
+                    <div class="seat" data-seat="37">37</div>
+                    <div class="seat" data-seat="38">38</div>
+                    <div class="seat" data-seat="39">39</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 入力フォーム -->
+        <form id="seatForm">
+            <div class="form-group">
+                <label for="studentNumber">出席番号:</label>
+                <input type="number" id="studentNumber" name="studentNumber" min="1" max="39" readonly>
+            </div>
+            <div class="form-group">
+                <label for="seatNumber">選択された席番号:</label>
+                <input type="number" id="seatNumber" name="seatNumber" readonly required>
+            </div>
+            <button type="submit">入力</button>
+        </form>
+
+        <!-- 入力済みリスト -->
+        <div id="submittedList" class="submitted-list"></div>
+
+        <!-- 確定ボタン -->
+        <button id="confirmButton" class="confirm-btn">確定</button>
+
+        <!-- 結果 -->
+        <div id="result" class="hidden">
+            <h2>結果</h2>
+            <div id="resultContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
