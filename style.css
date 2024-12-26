@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.confirm-btn {
+    background-color: red;
+    color: white;
+    margin-top: 10px;
+}
+
+.confirm-btn:hover {
+    background-color: darkred;
+}
+
+.hidden {
+    display: none;
+}
+
+.submitted-list {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+}
+
+.seating-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.whiteboard {
+    background-color: lightgray;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.2em;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.seating-grid {
+    display: flex;
+    gap: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.seat {
+    width: 50px;
+    height: 50px;
+    background-color: #f0f0f0;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+}
+
+.seat:hover {
+    background-color: #e0e0ff;
+}
+
+.seat.selected {
+    background-color: rgba(160, 196, 255, 0.8); /* 青いハイライト */
+    z-index: 2; /* 最前面に表示 */
+}
+
+.seat.unselected-text {
+    color: red; /* 赤い文字 */
+    font-weight: bold;
+}
+
+
+.empty-space {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+}
+.resolve-btn {
+    background-color: yellow;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.resolve-btn:hover {
+    background-color: gold;
+}
